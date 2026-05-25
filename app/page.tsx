@@ -8,12 +8,9 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-const Scene = dynamic(() => import('./components/Scene'), { ssr: false });
-
 export default function Home() {
   return (
     <ClientShell>
-      <Scene />
       <main className="relative bg-transparent min-h-screen z-10">
         <Navbar />
         <Hero />
