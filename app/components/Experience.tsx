@@ -8,7 +8,6 @@ const experience = [
     company: 'Virtu Origin',
     role: 'Data Analytics Intern',
     type: 'Internship',
-    location: 'Gurugram, Haryana',
     duration: 'Jun 2025 – Aug 2025',
     description: 'Working on data engineering and analytics infrastructure at a growing startup.',
     responsibilities: [
@@ -28,8 +27,6 @@ const education = [
     school: 'Galgotias University',
     degree: 'B.Tech Computer Science Engineering',
     duration: '2023 – 2027',
-    cgpa: '8.05 / 10',
-    location: 'Greater Noida, Uttar Pradesh',
     color: '#8b5cf6',
   },
 ];
@@ -106,7 +103,6 @@ export default function Experience() {
                     </div>
 
                     <div className="flex gap-3 mb-4 text-xs text-slate-500 font-mono">
-                      <span>📍 {exp.location}</span>
                       <span>🗓 {exp.duration}</span>
                     </div>
 
@@ -160,12 +156,8 @@ export default function Experience() {
                 </div>
                 <div className="flex gap-4 text-xs text-slate-500 font-mono">
                   <span>📅 {edu.duration}</span>
-                  <span>📍 {edu.location}</span>
                 </div>
-                <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-violet-500/10 border border-violet-500/20">
-                  <span className="text-violet-400 font-mono text-sm font-semibold">{edu.cgpa}</span>
-                  <span className="text-slate-500 text-xs">CGPA</span>
-                </div>
+
               </motion.div>
             ))}
 

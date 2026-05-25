@@ -80,13 +80,6 @@ export default function Contact() {
           >
             <div className="glass rounded-2xl p-6 border border-white/5 space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-violet-500/20 border border-violet-500/30 flex items-center justify-center">📍</div>
-                <div>
-                  <div className="text-xs text-slate-500 font-mono">LOCATION</div>
-                  <div className="text-white text-sm font-sora">Gurugram, Haryana, India</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center">📅</div>
                 <div>
                   <div className="text-xs text-slate-500 font-mono">AVAILABILITY</div>

@@ -40,13 +40,10 @@ export default function About() {
                 <div><span className="text-violet-400">const</span> <span className="text-cyan-400">engineer</span> <span className="text-white">= {'{'}</span></div>
                 <div className="pl-4"><span className="text-pink-400">name</span><span className="text-white">:</span> <span className="text-green-400">&quot;Bharat Nanda&quot;</span><span className="text-white">,</span></div>
                 <div className="pl-4"><span className="text-pink-400">role</span><span className="text-white">:</span> <span className="text-green-400">&quot;AI Engineer&quot;</span><span className="text-white">,</span></div>
-                <div className="pl-4"><span className="text-pink-400">university</span><span className="text-white">:</span> <span className="text-green-400">&quot;Galgotias University&quot;</span><span className="text-white">,</span></div>
-                <div className="pl-4"><span className="text-pink-400">degree</span><span className="text-white">:</span> <span className="text-green-400">&quot;B.Tech CSE&quot;</span><span className="text-white">,</span></div>
-                <div className="pl-4"><span className="text-pink-400">year</span><span className="text-white">:</span> <span className="text-yellow-400">2023–2027</span><span className="text-white">,</span></div>
-                <div className="pl-4"><span className="text-pink-400">cgpa</span><span className="text-white">:</span> <span className="text-yellow-400">8.05</span><span className="text-white">,</span></div>
-                <div className="pl-4"><span className="text-pink-400">location</span><span className="text-white">:</span> <span className="text-green-400">&quot;Gurugram, India&quot;</span><span className="text-white">,</span></div>
+                <div className="pl-4"><span className="text-pink-400">focus</span><span className="text-white">:</span> <span className="text-green-400">&quot;RAG · Backend · Full Stack&quot;</span><span className="text-white">,</span></div>
                 <div className="pl-4"><span className="text-pink-400">dsa</span><span className="text-white">:</span> <span className="text-yellow-400">400</span><span className="text-white">+ problems,</span></div>
                 <div className="pl-4"><span className="text-pink-400">leetcode</span><span className="text-white">:</span> <span className="text-yellow-400">1600</span><span className="text-white">+ rating,</span></div>
+                <div className="pl-4"><span className="text-pink-400">status</span><span className="text-white">:</span> <span className="text-green-400">&quot;open to opportunities&quot;</span><span className="text-white">,</span></div>
                 <div><span className="text-white">{'}'}</span></div>
               </div>
 

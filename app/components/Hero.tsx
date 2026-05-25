@@ -185,7 +185,7 @@ export default function Hero() {
               { value: '400+', label: 'DSA Problems' },
               { value: '1600+', label: 'LeetCode Rating' },
               { value: '3+', label: 'Major Projects' },
-              { value: '8.05', label: 'CGPA' },
+              { value: '1+', label: 'Year Experience' },
             ].map(s => (
               <div key={s.label} className="text-center">
                 <div className="font-sora font-bold text-2xl gradient-text">{s.value}</div>
