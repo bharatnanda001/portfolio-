@@ -35,8 +35,8 @@ export default function Projects() {
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="projects" className="py-32 bg-black text-white px-6 border-t border-border">
-      <div ref={ref} className="max-w-4xl mx-auto">
+    <section id="projects" className="py-32 bg-transparent text-white px-6 border-t border-white/10">
+      <div ref={ref} className="max-w-4xl mx-auto backdrop-blur-sm p-6 rounded-2xl">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

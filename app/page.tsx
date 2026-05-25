@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import ClientShell from './components/ClientShell';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -7,10 +8,13 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+const Scene = dynamic(() => import('./components/Scene'), { ssr: false });
+
 export default function Home() {
   return (
     <ClientShell>
-      <main className="relative bg-[#050508] min-h-screen">
+      <Scene />
+      <main className="relative bg-transparent min-h-screen z-10">
         <Navbar />
         <Hero />
         <About />

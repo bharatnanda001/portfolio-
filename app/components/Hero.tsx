@@ -7,7 +7,7 @@ const item = { hidden: { opacity: 0, y: 15 }, show: { opacity: 1, y: 0, transiti
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center bg-black px-6">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center bg-transparent px-6">
       <motion.div
         variants={stagger}
         initial="hidden"
