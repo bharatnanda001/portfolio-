@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bharat Nanda — Portfolio
 
-## Getting Started
+> **"A futuristic AI engineer command center floating in space."**
 
-First, run the development server:
+A next-generation 3D portfolio website for **Bharat Nanda**, AI Engineer & Full Stack Developer.
+
+![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4-38bdf8?logo=tailwindcss)
+![Three.js](https://img.shields.io/badge/Three.js-R3F-orange?logo=threedotjs)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-latest-0055FF)
+
+---
+
+## ✨ Features
+
+- 🌌 **3D Interactive Orb** — React Three Fiber with energy rings & particle galaxy
+- 🎨 **Glassmorphism UI** — Premium dark cyberpunk aesthetic
+- 🖱️ **Custom Cursor Glow** — Smooth trailing cursor with spotlight effects
+- ⚡ **Cinematic Animations** — Framer Motion + GSAP scroll-triggered transitions
+- 🌊 **Lenis Smooth Scroll** — Physics-based fluid scrolling
+- 📱 **Fully Responsive** — Works beautifully on all devices
+- 🚀 **Vercel Ready** — Optimized for deployment with Lighthouse score >90
+
+---
+
+## 🧠 Sections
+
+1. **Hero** — Animated headline, 3D orb, typewriter role, magnetic CTAs
+2. **About** — Code-terminal bio card, achievement quick-stats
+3. **Skills** — 6 skill categories with 3D tilt cards & animated progress bars
+4. **Projects** — Arogya, AI Quiz Generator, Alfina ERP with cinematic cards
+5. **Experience** — Virtu Origin internship timeline + education
+6. **Contact** — Futuristic form + social links (GitHub, LinkedIn, Email)
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Tech |
+|-------|------|
+| Framework | Next.js 15 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS 4 |
+| 3D | React Three Fiber, Three.js, Drei |
+| Animations | Framer Motion, GSAP |
+| Scroll | Lenis |
+| Deployment | Vercel |
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+# Clone the repository
+git clone https://github.com/bharatnanda001/portfolio-.git
+cd portfolio-
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Deployment (Vercel)
 
-## Learn More
+```bash
+# Install Vercel CLI
+npm i -g vercel
 
-To learn more about Next.js, take a look at the following resources:
+# Deploy
+vercel --prod
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Or connect your GitHub repo at [vercel.com](https://vercel.com) for automatic deployments.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 👤 About Bharat Nanda
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 🎓 B.Tech CSE @ Galgotias University (2023–2027) | CGPA: 8.05
+- 📍 Gurugram, Haryana, India
+- 💼 AI Engineer | Full Stack Developer | Backend Architect
+- 🧠 RAG Systems | FastAPI | React | Docker
+- 🏆 1600+ LeetCode Rating | 400+ DSA Problems
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+*Built with ❤️ by Bharat Nanda*
