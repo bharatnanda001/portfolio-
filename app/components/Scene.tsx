@@ -12,24 +12,42 @@ function Starfield() {
   // Generate random positions for 5000 stars inside a sphere
   const sphere = useMemo(() => {
     const positions = new Float32Array(5000 * 3);
-    random.inSphere(positions, { radius: 1.5 });
-    return positions;
+    const colors = new Float32Array(5000 * 3);
+    random.inSphere(positions, { radius: 2 });
+    
+    // Assign random cyan, blue, light red, and green colors to stars
+    for (let i = 0; i < 5000; i++) {
+      const color = new THREE.Color();
+      const rand = Math.random();
+      if (rand < 0.35) {
+        color.setHSL(0.55 + Math.random() * 0.1, 0.9, 0.6); // Cyan/Blue stars
+      } else if (rand < 0.6) {
+        color.setHSL(0.3 + Math.random() * 0.1, 0.8, 0.6); // Green stars
+      } else if (rand < 0.8) {
+        color.setHSL(0.95 + Math.random() * 0.05, 0.9, 0.6); // Light Red stars
+      } else {
+        color.setHSL(Math.random() * 0.1, 0.1, 0.95); // White/Silver stars
+      }
+      color.toArray(colors, i * 3);
+    }
+    
+    return { positions, colors };
   }, []);
 
   useFrame((state, delta) => {
     if (ref.current) {
-      ref.current.rotation.x -= delta / 10;
-      ref.current.rotation.y -= delta / 15;
+      ref.current.rotation.x -= delta / 20;
+      ref.current.rotation.y -= delta / 30;
     }
   });
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false}>
+      <Points ref={ref} positions={sphere.positions} colors={sphere.colors} stride={3} frustumCulled={false}>
         <PointMaterial
           transparent
-          color="#ffffff"
-          size={0.005}
+          vertexColors
+          size={0.008}
           sizeAttenuation={true}
           depthWrite={false}
         />
@@ -43,28 +61,63 @@ function FloatingShapes() {
   
   useFrame((state, delta) => {
     if (groupRef.current) {
-      // Gentle rotation tied to time
-      groupRef.current.rotation.y += delta * 0.05;
+      groupRef.current.rotation.y += delta * 0.1;
       
-      // We can also tie the camera to scroll here if we want a parallax effect,
-      // but for now, we let the shapes float.
-      const scrollY = window.scrollY;
-      groupRef.current.position.y = scrollY * 0.001; // subtle parallax
+      // subtle parallax based on mouse
+      const targetX = (state.pointer.x * 0.2);
+      const targetY = (state.pointer.y * 0.2);
+      groupRef.current.position.x += (targetX - groupRef.current.position.x) * 0.05;
+      groupRef.current.position.y += (targetY - groupRef.current.position.y) * 0.05;
     }
   });
 
+  const glassMaterial = (
+    <meshPhysicalMaterial 
+      roughness={0.1}
+      transmission={0.9}
+      thickness={0.5}
+      clearcoat={1}
+      clearcoatRoughness={0.1}
+      ior={1.5}
+    />
+  );
+
   return (
     <group ref={groupRef}>
-      <Float speed={2} rotationIntensity={1} floatIntensity={1}>
-        <mesh position={[1, 0.5, -2]}>
-          <octahedronGeometry args={[0.3, 0]} />
-          <meshStandardMaterial color="#8b5cf6" wireframe opacity={0.3} transparent />
+      <Float speed={2} rotationIntensity={1.5} floatIntensity={2}>
+        <mesh position={[1.5, 0.5, -2]}>
+          <torusKnotGeometry args={[0.5, 0.15, 100, 16]} />
+          <meshPhysicalMaterial 
+            color="#22d3ee" // Cyan
+            roughness={0.2}
+            transmission={0.8}
+            thickness={1}
+            ior={1.5}
+          />
         </mesh>
       </Float>
-      <Float speed={1.5} rotationIntensity={1.5} floatIntensity={1.5}>
-        <mesh position={[-1.5, -0.5, -3]}>
-          <icosahedronGeometry args={[0.4, 0]} />
-          <meshStandardMaterial color="#22d3ee" wireframe opacity={0.3} transparent />
+      <Float speed={1.5} rotationIntensity={2} floatIntensity={1.5}>
+        <mesh position={[-2, -0.5, -3]}>
+          <icosahedronGeometry args={[0.8, 0]} />
+          <meshPhysicalMaterial 
+            color="#fb7185" // Light Red/Rose
+            roughness={0.2}
+            transmission={0.8}
+            thickness={1}
+            ior={1.5}
+          />
+        </mesh>
+      </Float>
+      <Float speed={2.5} rotationIntensity={1} floatIntensity={2.5}>
+        <mesh position={[0, -2, -4]}>
+          <sphereGeometry args={[0.6, 64, 64]} />
+          <meshPhysicalMaterial 
+            color="#34d399" // Emerald Green
+            roughness={0.1}
+            transmission={0.9}
+            thickness={2}
+            ior={1.5}
+          />
         </mesh>
       </Float>
     </group>
@@ -86,7 +139,7 @@ export default function Scene() {
       </Canvas>
       
       {/* Vignette overlay for premium cinematic feel */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_#000000_100%)] opacity-80" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#000000_100%)] opacity-80" />
     </div>
   );
 }

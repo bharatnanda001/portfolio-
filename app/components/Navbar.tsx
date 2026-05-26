@@ -33,9 +33,9 @@ export default function Navbar() {
           BN.
         </a>
         
-        <div className="hidden md:flex items-center gap-8 text-sm">
+        <div className="hidden md:flex items-center gap-8 text-sm font-serif font-medium uppercase tracking-widest">
           {links.map(l => (
-            <a key={l.label} href={l.href} className="text-muted hover:text-white transition-colors">
+            <a key={l.label} href={l.href} className="text-gray-400 hover:text-white transition-colors duration-300">
               {l.label}
             </a>
           ))}

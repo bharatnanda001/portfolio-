@@ -14,40 +14,27 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-sm font-mono text-muted uppercase tracking-widest mb-12"
+          className="font-serif text-3xl md:text-4xl font-bold uppercase tracking-widest text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500 mb-12"
         >
           About
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg md:text-xl text-muted font-light leading-relaxed"
+            className="text-lg md:text-xl text-gray-300 font-light leading-relaxed space-y-6"
           >
-            I am a Computer Science student and software engineer focusing on artificial intelligence and backend architecture. I build production-grade platforms with a strong emphasis on clean code and scalability.
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
-          >
-            <p className="text-muted leading-relaxed">
-              My expertise spans RAG pipelines, RESTful APIs, and full-stack development. I enjoy tackling complex architectural problems and optimizing systems for performance.
+            <p>
+              I’m Bharat Nanda, a pre-final year Computer Science student passionate about software engineering, backend development, artificial intelligence, and building scalable digital products. I enjoy turning ideas into practical applications while continuously learning modern technologies and development practices.
             </p>
-            <div className="pt-6 grid grid-cols-2 gap-6 border-t border-border">
-              <div>
-                <div className="text-3xl font-medium text-white mb-1">400+</div>
-                <div className="text-xs text-muted font-mono uppercase tracking-wider">DSA Problems</div>
-              </div>
-              <div>
-                <div className="text-3xl font-medium text-white mb-1">1600+</div>
-                <div className="text-xs text-muted font-mono uppercase tracking-wider">LeetCode Rating</div>
-              </div>
-            </div>
+            <p>
+              I have hands-on experience developing REST APIs, ERP systems, and AI-powered web applications using Java, Python, FastAPI, ReactJS, Node.js, and SQL databases. My work focuses on clean architecture, secure authentication, scalable backend systems, and efficient user experiences.
+            </p>
+            <p>
+              Along with development, I also have a strong interest in graphic design and UI aesthetics, combining creativity with technology to build visually engaging and user-friendly solutions. I’m currently focused on improving my problem-solving skills, exploring advanced software engineering concepts, and contributing to impactful tech projects.
+            </p>
           </motion.div>
         </div>
       </div>

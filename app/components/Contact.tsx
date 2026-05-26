@@ -40,8 +40,8 @@ export default function Contact() {
             </p>
             
             <div className="space-y-4 font-mono text-sm">
-              <a href="mailto:bharat@example.com" className="block text-muted hover:text-white transition-colors">
-                bharat@example.com
+              <a href="mailto:bharatnanda184@gmail.com" className="block text-muted hover:text-white transition-colors">
+                bharatnanda184@gmail.com
               </a>
               <a href="https://github.com/bharatnanda001" target="_blank" rel="noopener noreferrer" className="block text-muted hover:text-white transition-colors">
                 github.com/bharatnanda001
