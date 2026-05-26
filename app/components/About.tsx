@@ -9,23 +9,19 @@ export default function About() {
 
   return (
     <section id="about" className="py-32 bg-transparent text-white px-6 border-t border-white/10">
-      <div ref={ref} className="max-w-4xl mx-auto backdrop-blur-sm p-6 rounded-2xl">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="font-serif text-3xl md:text-4xl font-bold uppercase tracking-widest text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500 mb-12"
-        >
+      <motion.div 
+        ref={ref} 
+        initial={{ opacity: 0, scale: 0.85, y: 50 }}
+        animate={inView ? { opacity: 1, scale: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="max-w-4xl mx-auto backdrop-blur-sm p-6 rounded-2xl"
+      >
+        <h2 className="font-serif text-3xl md:text-4xl font-bold uppercase tracking-widest text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500 mb-12">
           About
-        </motion.h2>
+        </h2>
 
         <div className="w-full">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg md:text-xl text-gray-300 font-light leading-relaxed space-y-6"
-          >
+          <div className="text-lg md:text-xl text-gray-300 font-light leading-relaxed space-y-6">
             <p>
               I’m Bharat Nanda, a pre-final year Computer Science student passionate about software engineering, backend development, artificial intelligence, and building scalable digital products. I enjoy turning ideas into practical applications while continuously learning modern technologies and development practices.
             </p>
@@ -35,9 +31,9 @@ export default function About() {
             <p>
               Along with development, I also have a strong interest in graphic design and UI aesthetics, combining creativity with technology to build visually engaging and user-friendly solutions. I’m currently focused on improving my problem-solving skills, exploring advanced software engineering concepts, and contributing to impactful tech projects.
             </p>
-          </motion.div>
+          </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

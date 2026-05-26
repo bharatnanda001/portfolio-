@@ -18,22 +18,19 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-32 bg-transparent text-white px-6 border-t border-white/10">
-      <div ref={ref} className="max-w-4xl mx-auto backdrop-blur-sm p-6 rounded-2xl">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-sm font-mono text-muted uppercase tracking-widest mb-16"
-        >
+      <motion.div 
+        ref={ref} 
+        initial={{ opacity: 0, scale: 0.85, y: 50 }}
+        animate={inView ? { opacity: 1, scale: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="max-w-4xl mx-auto backdrop-blur-sm p-6 rounded-2xl"
+      >
+        <h2 className="font-serif text-3xl md:text-4xl font-bold uppercase tracking-widest text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-500 to-rose-400 mb-16">
           Contact
-        </motion.h2>
+        </h2>
 
         <div className="grid md:grid-cols-2 gap-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
+          <div>
             <h3 className="text-3xl font-medium mb-6">Let's work together.</h3>
             <p className="text-muted leading-relaxed mb-12">
               I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
@@ -50,7 +47,7 @@ export default function Contact() {
                 LinkedIn
               </a>
             </div>
-          </motion.div>
+          </div>
 
           <motion.form
             initial={{ opacity: 0, y: 20 }}
@@ -97,7 +94,7 @@ export default function Contact() {
             </button>
           </motion.form>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

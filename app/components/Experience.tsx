@@ -43,21 +43,22 @@ export default function Experience() {
   const inView = useInView(ref, { once: true });
 
   return (
-    <section id="experience" ref={ref} className="relative py-32 overflow-hidden">
+    <section id="experience" className="relative py-32 overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-600/6 rounded-full blur-[130px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+      <motion.div 
+        ref={ref} 
+        initial={{ opacity: 0, scale: 0.85, y: 50 }}
+        animate={inView ? { opacity: 1, scale: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="max-w-6xl mx-auto px-6"
+      >
+        <div className="text-center mb-16">
           <span className="font-mono text-xs text-cyan-400 tracking-widest uppercase">// Journey</span>
           <h2 className="font-sora font-bold text-4xl md:text-5xl text-white mt-3">
             Experience &amp; <span className="gradient-text">Education</span>
           </h2>
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Experience */}
@@ -186,7 +187,7 @@ export default function Experience() {
             </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
