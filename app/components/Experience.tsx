@@ -5,18 +5,18 @@ import { useRef } from 'react';
 
 const experience = [
   {
-    company: 'Virtu Origin',
-    role: 'Data Analytics Intern',
-    type: 'Internship',
-    duration: 'Jun 2025 – Aug 2025',
-    description: 'Working on data engineering and analytics infrastructure at a growing startup.',
+    company: 'Kirat Communication',
+    role: 'Software Development Intern',
+    type: 'Hybrid Internship',
+    duration: 'May 2026 – Present',
+    description: 'Built Alfina ERP, a multi-company billing and invoicing platform using React.js (Vite), Node.js/Express, and MySQL.',
     responsibilities: [
-      'Built ETL pipelines using Python and SQL for large-scale data processing',
-      'Optimized SQL queries improving performance by significant margins',
-      'Integrated REST APIs for real-time data ingestion workflows',
-      'Developed scalable reporting workflows and dashboards',
+      'Contributed to Alfina ERP billing & invoicing platform end-to-end',
+      'Implemented quotation-to-invoice conversion workflows and automated recurring subscription billing using cron jobs',
+      'Engineered JWT authentication and role-based access control (SUPERADMIN, ADMIN, SALES, VIEWER) for data isolation',
+      'Collaborated closely across the engineering lifecycle using Git and RESTful API best practices',
     ],
-    tech: ['Python', 'SQL', 'REST APIs', 'ETL', 'Data Engineering'],
+    tech: ['React.js', 'Node.js', 'Express', 'MySQL', 'JWT', 'Git'],
     color: '#22d3ee',
     current: true,
   },
@@ -25,17 +25,17 @@ const experience = [
 const education = [
   {
     school: 'Galgotias University',
-    degree: 'B.Tech Computer Science Engineering',
+    degree: 'B.Tech in Computer Science & Engineering (AI & ML) — CGPA: 8.05/10.0',
     duration: '2023 – 2027',
     color: '#8b5cf6',
   },
 ];
 
 const achievements = [
-  { icon: '🏆', title: '1600+ LeetCode Rating', desc: 'Competitive programming excellence' },
-  { icon: '💻', title: '400+ DSA Problems', desc: 'Data structures & algorithms mastery' },
-  { icon: '🤖', title: 'Google Android Internship', desc: 'Google-backed virtual development program' },
-  { icon: '🚀', title: 'AI Engineer', desc: 'RAG systems & backend architecture specialist' },
+  { icon: '🏆', title: '1700+ LeetCode Rating', desc: '500+ problems solved across LeetCode, GFG & Codeforces' },
+  { icon: '🌐', title: 'Open Source Contributor', desc: 'Bug fixes to Android Camera module and RAG pipeline' },
+  { icon: '🤖', title: 'Google AI Essentials', desc: 'Certified by Google in Generative AI systems' },
+  { icon: '📜', title: 'GitHub Foundations', desc: 'Certified by GitHub Education & GUVI Java' },
 ];
 
 export default function Experience() {

@@ -63,10 +63,10 @@ export default function CursorGlow() {
   }, []);
 
   return (
-    <>
+    <div className="hidden lg:block pointer-events-none">
       <div ref={dotRef} className="cursor-dot" />
       <div ref={ringRef} className="cursor-ring" />
       <div ref={glowRef} className="cursor-glow" />
-    </>
+    </div>
   );
 }
